@@ -7,13 +7,13 @@ interface MongooseConnection{
     promise: Promise<Mongoose> |null;
 }
 
-let cached: MongooseConnection= (global as any).mongoose
+let cached: {
+    conn: typeof mongoose | null;
+    promise: Promise<typeof mongoose> | null;
+} = global.mongoose;
 
-if (!cached){
-    cached=(global as any).mongoose={
-        conn: null,
-        promise:null
-    }
+if (!cached) {
+    cached = global.mongoose = { conn: null, promise: null };
 }
 
 

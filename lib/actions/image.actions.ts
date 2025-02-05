@@ -180,3 +180,14 @@ export async function getUserImages({
     handleError(error);
   }
 }
+
+// Replace any with proper types
+export async function uploadImage(file: File): Promise<UploadResponse> {
+    // ... existing code ...
+}
+
+// For the other any, use appropriate interface/type
+interface UploadResponse {
+    url: string;
+    // add other properties as needed
+}
