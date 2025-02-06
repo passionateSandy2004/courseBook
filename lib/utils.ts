@@ -89,7 +89,7 @@ export const debounce = (func: (...args: any[]) => void, delay: number) => {
   let timeoutId: NodeJS.Timeout | null;
   return (...args: any[]) => {
     if (timeoutId) clearTimeout(timeoutId);
-    timeoutId = setTimeout(() => func(...args), delay);
+    timeoutId = setTimeout(() => func.apply(null, args), delay);
   };
 };
 
@@ -155,14 +155,3 @@ export const deepMergeObjects = (obj1: any, obj2: any) => {
 
   return output;
 };
-
-// Replace any types with proper interfaces
-interface ConfigType {
-    // Add appropriate properties
-    [key: string]: unknown;
-}
-
-// Update functions to use proper typing
-function someFunction(config: ConfigType): void {
-    // ... existing code ...
-}
