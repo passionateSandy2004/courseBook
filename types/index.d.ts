@@ -11,10 +11,10 @@ declare type CreateUserParams = {
   };
   
   declare type UpdateUserParams = {
-    firstName: string;
-    lastName: string;
-    username: string;
-    photo: string;
+    firstName: string | undefined;
+    lastName: string | undefined;
+    username: string | undefined;
+    photo: string | undefined;
   };
   
   // ====== IMAGE PARAMS

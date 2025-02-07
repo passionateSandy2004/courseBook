@@ -1,31 +1,31 @@
 export const navLinks = [
     {
-      label: "Home",
+      label: "Basics",
       route: "/",
       icon: "/assets/icons/home.svg",
     },
     {
-      label: "Image Restore",
+      label: "Beginner",
       route: "/transformations/add/restore",
       icon: "/assets/icons/image.svg",
     },
     {
-      label: "Generative Fill",
+      label: "Intermediate",
       route: "/transformations/add/fill",
       icon: "/assets/icons/stars.svg",
     },
     {
-      label: "Object Remove",
+      label: "Advanced",
       route: "/transformations/add/remove",
       icon: "/assets/icons/scan.svg",
     },
     {
-      label: "Object Recolor",
+      label: "Expert",
       route: "/transformations/add/recolor",
       icon: "/assets/icons/filter.svg",
     },
     {
-      label: "Background Remove",
+      label: "Business",
       route: "/transformations/add/removeBackground",
       icon: "/assets/icons/camera.svg",
     },
